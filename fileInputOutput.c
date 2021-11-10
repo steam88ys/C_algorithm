@@ -5,7 +5,7 @@ void createNewFile(void) {
 	char next;
 	int prog, kor, eng, math;
 
-	fopen_s(&filePointer, "C:/Users/user/Desktop/score.txt", "w");
+	fopen_s(&filePointer, "C:/C알고리즘/score.txt", "w");
 	printf("C언어, 국어, 영어, 수학 성적을 입력하세요!\n");
 	do {
 		printf("C언어 : "); scanf_s("%d", &prog);
@@ -25,7 +25,7 @@ void appendFile(void) {
 	char next;
 	int prog, kor, eng, math;
 
-	fopen_s(&filePointer, "C:/Users/user/Desktop/score.txt", "a");
+	fopen_s(&filePointer, "C:/C알고리즘/score.txt", "a");
 	printf("C언어, 국어, 영어, 수학 성적을 입력하세요!\n");
 	do {
 		printf("C언어 : "); scanf_s("%d", &prog);
@@ -44,7 +44,7 @@ void txtFilePrint(void) {
 	FILE* filePointer;
 	int prog, kor, eng, math, sum;
 
-	fopen_s(&filePointer, "C:/Users/user/Desktop/score.txt", "r");
+	fopen_s(&filePointer, "C:/C알고리즘/score.txt", "r");
 	printf("\nxcore.txt 내용 출력\n\nC언어\t국어\t영어\t수학\t총점\n");
 	do {
 		fscanf_s(filePointer, "%3d, %3d, %3d, %3d\n", &prog, &kor, &eng, &math);
@@ -72,12 +72,12 @@ int main(void) {
 		if (select == 4) break;
 		switch (select) {
 		case 1: createNewFile();
-				break;
+			break;
 		case 2: appendFile();
-				break;
+			break;
 		case 3: txtFilePrint();
 		}
 	} while (1);
-	
+
 	return 0;
 }
